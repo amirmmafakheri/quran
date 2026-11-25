@@ -32,7 +32,7 @@ The source data is kept in `quran_surahs/`, `quran_uthmani.json`, and `translati
 
 ## Deploy to GitHub Pages
 
-The workflow in `.github/workflows/deploy-pages.yml` builds and deploys the site when changes are pushed to `master`. In repository settings, choose **Settings → Pages → Build and deployment → GitHub Actions**. If the repository's default branch is not `master`, update the workflow branch.
+The workflow in `.github/workflows/deploy-pages.yml` builds and deploys the site when changes are pushed to `master`. Before its first run, enable Pages once in repository settings: choose **Settings → Pages → Build and deployment → GitHub Actions**, then re-run the failed workflow. `configure-pages` cannot create the Pages site using the default `GITHUB_TOKEN`; enabling it in settings avoids requiring a separate personal access token. If the repository's default branch is not `master`, update the workflow branch.
 
 The build automatically uses the correct base path for a project site (`https://<owner>.github.io/<repository>/`) or an owner site (`https://<owner>.github.io/`). For a custom domain or another deployment path, set the GitHub Actions repository variable `VITE_BASE_PATH` to `/` or to the required path ending in `/`. The workflow copies `index.html` to `404.html` so direct links and refreshed pages continue to work on GitHub Pages.
 
