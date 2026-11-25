@@ -2,7 +2,6 @@ import type { DashboardRoute } from '../../app/useDashboardRoute'
 import { dashboardPath } from '../../app/useDashboardRoute'
 import { AppLink } from '../../app/AppLink'
 import { TOPIC_CATEGORIES } from '../topics/topicsData'
-import { QURAN_WONDERS } from '../wonders/wondersData'
 import './SurahSidebar.css'
 
 interface SurahSidebarProps {
@@ -19,7 +18,6 @@ export function SurahSidebar({ route, navigate }: SurahSidebarProps) {
         <span className="sidebar-heading-mark" aria-hidden="true">۞</span>
         <div>
           <strong>مطالعه‌ی قرآن</strong>
-          <span>انتخاب مسیر مطالعه</span>
         </div>
       </div>
 
@@ -71,10 +69,6 @@ export function SurahSidebar({ route, navigate }: SurahSidebarProps) {
           <div className="sidebar-section-heading">
             <h2 id="sidebar-repetitions-title">واژگان پرتکرار قرآن</h2>
           </div>
-          <p className="sidebar-description">
-            بررسی تکرار تقریبی واژه‌ها و حوزه‌های معنایی آن‌ها.
-          </p>
-          <span className="sidebar-data-note">۳۰ واژه‌ی شاخص همراه با یادداشت‌های تحلیلی.</span>
         </section>
       ) : route.view === 'topics' ? (
         <section className="sidebar-detail" aria-labelledby="sidebar-topics-title">
@@ -121,26 +115,14 @@ export function SurahSidebar({ route, navigate }: SurahSidebarProps) {
               </div>
             ))}
           </nav>
-          <span className="sidebar-data-note">برای آدم ۳۸، ابراهیم ۹۹، عیسی ۴۲، محمد ۱۲، موسی ۲۲۰، نوح ۶۷ و سلیمان ۲۵ آیه ثبت شده است.</span>
         </section>
       ) : route.view === 'wonders' ? (
         <section className="sidebar-detail" aria-labelledby="sidebar-wonders-title">
           <div className="sidebar-section-heading">
             <h2 id="sidebar-wonders-title">عجایب و معجزات قرآن</h2>
           </div>
-          <p className="sidebar-description">
-            یادداشت‌های موضوعی درباره‌ی آیات و خوانش‌های معاصر.
-          </p>
-          <span className="sidebar-data-note">
-            {QURAN_WONDERS.length.toLocaleString('fa-IR')} موضوع؛ برخی پیوندهای علمی، برداشت‌های تفسیریِ مورد گفت‌وگو هستند.
-          </span>
         </section>
       ) : null}
-
-      <div className="sidebar-footer">
-        <span className="sidebar-footer-mark" aria-hidden="true">✦</span>
-        <span>هر بار، دریچه‌ای تازه</span>
-      </div>
     </aside>
   )
 }

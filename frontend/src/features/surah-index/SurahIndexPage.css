@@ -28,22 +28,12 @@
   font-size: 24px;
 }
 
-.surah-index-heading .section-kicker {
-  color: var(--text-subtle);
-}
-
 .surah-index-heading h2 {
   margin: 0;
   color: var(--text-primary);
   font-size: 27px;
   font-weight: 700;
   line-height: 1.3;
-}
-
-.surah-index-heading p {
-  margin: 2px 0 0;
-  color: var(--text-muted);
-  font-size: 15px;
 }
 
 .surah-index-total {
@@ -346,10 +336,6 @@
 
   .surah-index-heading h2 {
     font-size: 23px;
-  }
-
-  .surah-index-heading p {
-    font-size: 13px;
   }
 
   .surah-index-total {

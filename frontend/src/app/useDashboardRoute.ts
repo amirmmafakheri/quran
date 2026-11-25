@@ -39,6 +39,10 @@ export function readDashboardRoute(pathname: string): DashboardRoute {
     .filter(Boolean)
     .map(decodeSegment)
 
+  if (!section) {
+    return { view: 'surahs', surah: 1, word: '', category: '', topic: '', wonderId: '' }
+  }
+
   if (section === 'surahs') {
     const surah = Number(second)
     if (Number.isInteger(surah) && surah >= 1 && surah <= 114) {

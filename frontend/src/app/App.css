@@ -35,12 +35,6 @@
   font-weight: 700;
 }
 
-.brand-copy small {
-  margin-top: 5px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
 .dashboard-layout {
   display: grid;
   grid-template-columns: minmax(245px, 285px) minmax(0, 1fr);
@@ -119,10 +113,6 @@
 
   .brand-copy strong {
     font-size: 19px;
-  }
-
-  .brand-copy small {
-    font-size: 12px;
   }
 
 }

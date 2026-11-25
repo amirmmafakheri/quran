@@ -93,9 +93,7 @@ export function SurahIndexPage({
       <header className="surah-index-heading">
         <div className="surah-index-heading-icon" aria-hidden="true">☷</div>
         <div>
-          <span className="section-kicker">کتابخانه‌ی قرآن</span>
           <h2 id="surah-index-title">فهرست سوره‌ها</h2>
-          <p>سوره‌ی موردنظر را انتخاب کنید و برای خواندن ترجمه وارد شوید.</p>
         </div>
         <span className="surah-index-total" aria-live="polite">
           {normalizedSearch

@@ -70,11 +70,10 @@ export function App() {
   return (
     <div className="app-shell">
       <header className="site-header">
-        <a className="brand" href={import.meta.env.BASE_URL} aria-label="قرآن‌خوان، صفحه‌ی اصلی">
+        <a className="brand" href={import.meta.env.BASE_URL} aria-label="قرآن، صفحه‌ی اصلی">
           <span className="brand-mark" aria-hidden="true">۞</span>
           <span className="brand-copy">
-            <strong>قرآن‌خوان</strong>
-            <small>همراهِ خواندن و اندیشه</small>
+            <strong>قرآن</strong>
           </span>
         </a>
         <button
@@ -96,7 +95,7 @@ export function App() {
         />
 
         <main className="dashboard-content">
-          <h1 className="visually-hidden">قرآن‌خوان</h1>
+          <h1 className="visually-hidden">قرآن</h1>
           {route.view === 'reader' ? (
             <SurahReader
               route={route}
