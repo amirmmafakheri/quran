@@ -1,0 +1,12 @@
+{
+  "surahs": [
+    { "number": 7, "verses": [65, 70, 71, 72] },
+    { "number": 11, "verses": [50, 53, 54, 58, 59, 60, 89] },
+    { "number": 23, "verses": [32] },
+    { "number": 26, "verses": [124] },
+    { "number": 38, "verses": [12] },
+    { "number": 46, "verses": [21, 22, 23, 24] },
+    { "number": 54, "verses": [18] },
+    { "number": 89, "verses": [6] }
+  ]
+}

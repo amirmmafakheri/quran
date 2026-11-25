@@ -1,0 +1,61 @@
+.translation-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.translation-picker select {
+  min-width: 154px;
+  height: 39px;
+  padding: 0 10px;
+  border: 1px solid var(--border-control);
+  border-radius: 9px;
+  color: var(--text-default);
+  background: var(--surface-input);
+  font: inherit;
+  cursor: pointer;
+}
+
+.translation-picker select:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.translation-picker select:disabled {
+  color: var(--text-subtle);
+  cursor: wait;
+}
+
+.translation-list-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--danger);
+  font-size: 13px;
+}
+
+.translation-list-error button {
+  padding: 5px 8px;
+  border: 1px solid var(--danger-border);
+  border-radius: 7px;
+  color: var(--danger-heading);
+  background: var(--danger-soft);
+  font: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  .translation-picker {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .translation-picker select {
+    min-width: 0;
+    flex: 1;
+  }
+}

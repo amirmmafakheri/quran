@@ -1,0 +1,128 @@
+.app-shell {
+  width: min(1460px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.site-header {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brand-mark {
+  color: var(--forest);
+  font-size: 37px;
+  line-height: 1;
+}
+
+.brand-copy {
+  display: grid;
+  line-height: 1.15;
+}
+
+.brand-copy strong {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.brand-copy small {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: minmax(245px, 285px) minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+}
+
+.dashboard-content {
+  min-width: 0;
+}
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.section-kicker {
+  display: block;
+  color: var(--text-subtle);
+  font-size: 14px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 13px;
+  border: 1px solid var(--border-control);
+  border-radius: 12px;
+  color: var(--text-default);
+  background: var(--surface);
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 150ms ease, background 150ms ease, border-color 150ms ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent-border);
+  color: var(--accent-strong);
+  background: var(--surface-muted);
+}
+
+.theme-toggle > span:first-child {
+  color: var(--gold);
+  font-family: sans-serif;
+  font-size: 19px;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    width: min(100% - 32px, 720px);
+  }
+
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .app-shell {
+    width: calc(100% - 24px);
+  }
+
+  .site-header {
+    height: 76px;
+  }
+
+  .brand-copy strong {
+    font-size: 19px;
+  }
+
+  .brand-copy small {
+    font-size: 12px;
+  }
+
+}

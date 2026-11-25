@@ -1,0 +1,172 @@
+.verse-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 39px minmax(0, 1fr) 20px;
+  align-items: start;
+  gap: 16px;
+  min-height: 62px;
+  padding: 16px 19px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  transition: border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+}
+
+.verse-card:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-card);
+}
+
+.verse-number {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  color: var(--accent-muted);
+  background: var(--accent-tint);
+  font-size: 15px;
+  line-height: 1;
+}
+
+.verse-translation-button {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 1px 0 0;
+  border: 0;
+  color: var(--text-primary);
+  background: transparent;
+  font: inherit;
+  text-align: right;
+  cursor: pointer;
+}
+
+.verse-translation-button:focus-visible {
+  border-radius: 5px;
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.verse-translation-button > span:first-child,
+.verse-card > p {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.verse-toggle-icon {
+  width: 23px;
+  height: 23px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  margin-top: 5px;
+  border-radius: 7px;
+  color: var(--accent-muted);
+  background: var(--accent-soft);
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.verse-card.is-expanded .verse-toggle-icon {
+  transform: rotate(180deg);
+  color: var(--accent);
+  background: var(--accent-hover);
+}
+
+.verse-arabic-panel {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-rows: 0fr;
+  margin-top: 0;
+  opacity: 0;
+  transition: grid-template-rows 180ms ease, margin-top 180ms ease, opacity 180ms ease;
+}
+
+.verse-card.is-expanded .verse-arabic-panel {
+  grid-template-rows: 1fr;
+  margin-top: 5px;
+  opacity: 1;
+}
+
+.verse-arabic-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.verse-arabic-inner p {
+  margin: 0;
+  padding: 11px 5px 2px;
+  border-top: 1px solid var(--border-soft);
+  color: var(--arabic-text);
+  font-family: "B Nazanin", "Amiri", "Noto Naskh Arabic", serif;
+  font-size: 25px;
+  line-height: 2;
+  text-align: right;
+}
+
+.verse-quranic-waw {
+  font-size: 0.6875em;
+}
+
+.opening-verse .verse-arabic-inner p {
+  border-top-color: var(--border-soft);
+}
+
+.verse-card > p {
+  padding-top: 1px;
+}
+
+.verse-decoration {
+  align-self: start;
+  padding-top: 5px;
+  color: var(--gold);
+  font-size: 15px;
+}
+
+.verse-card p {
+  margin: 0;
+  padding-top: 1px;
+}
+
+.opening-verse {
+  grid-template-columns: 85px minmax(0, 1fr) 20px;
+  background: var(--surface-muted);
+}
+
+.opening-label {
+  align-self: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .verse-card {
+    grid-template-columns: 34px minmax(0, 1fr) 14px;
+    gap: 10px;
+    padding: 13px 12px;
+  }
+
+  .verse-card p {
+    font-size: 18px;
+  }
+
+  .opening-verse {
+    grid-template-columns: 74px minmax(0, 1fr) 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .verse-arabic-panel,
+  .verse-toggle-icon {
+    transition-duration: 0.01ms !important;
+  }
+}

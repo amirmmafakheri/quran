@@ -1,0 +1,20 @@
+{
+  "surahs": [
+    { "number": 2, "verses": [86, 183, 184, 185, 187, 196] },
+    { "number": 4, "verses": [92] },
+    { "number": 5, "verses": [89, 95] },
+    { "number": 9, "verses": [112] },
+    { "number": 14, "verses": [30] },
+    { "number": 16, "verses": [55] },
+    { "number": 19, "verses": [26] },
+    { "number": 20, "verses": [72] },
+    { "number": 23, "verses": [37] },
+    { "number": 26, "verses": [81] },
+    { "number": 28, "verses": [80] },
+    { "number": 29, "verses": [25, 64] },
+    { "number": 33, "verses": [35] },
+    { "number": 37, "verses": [61] },
+    { "number": 58, "verses": [4] },
+    { "number": 87, "verses": [17] }
+  ]
+}

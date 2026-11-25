@@ -1,0 +1,9 @@
+{
+  "surahs": [
+    { "number": 2, "verses": [189, 196, 197] },
+    { "number": 5, "verses": [2] },
+    { "number": 9, "verses": [3] },
+    { "number": 22, "verses": [27, 29, 30, 33, 36] },
+    { "number": 108, "verses": [2] }
+  ]
+}
